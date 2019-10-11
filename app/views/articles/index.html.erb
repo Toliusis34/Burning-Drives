@@ -1,0 +1,7 @@
+<% @articles.each do |article| %>
+  <div class="booyah-box col-10 offset-1">
+    <h1><%= link_to article.article_name, article_path(article) %></h1><br />
+    <i><%= article.tagline %></i><br />
+  </div>
+<% end %>
+<%= will_paginate @articles %>
