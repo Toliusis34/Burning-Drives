@@ -1,0 +1,10 @@
+<div class="booyah-box col-10 offset-1">
+  <h1>Edit Article</h1>
+  <%= simple_form_for @article do |f| %>
+    <%= f.input :article_name %>
+    <%= f.input :tagline %>
+    <%= f.input :article %>
+    <br />
+    <%= f.submit 'Update', class: 'btn btn-outline-success' %>
+  <% end %>
+</div>
