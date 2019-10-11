@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
   def index
     @articles = Article.all
@@ -21,10 +21,16 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    if @article.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
   end
 
   def update
     @article = Article.find(params[:id])
+    if @article.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
     @article.update_attributes(article_params)
     redirect_to article_path
   end
