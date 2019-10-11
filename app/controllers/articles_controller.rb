@@ -11,8 +11,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    current_user.articles.create(article_params)
-    redirect_to root_path
+    @article = current_user.articles.create(article_params)
+    if @article.valid?
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show
@@ -32,7 +36,11 @@ class ArticlesController < ApplicationController
       return render plain: 'Not Allowed', status: :forbidden
     end
     @article.update_attributes(article_params)
-    redirect_to article_path
+    if @article.valid?
+      redirect_to article_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
