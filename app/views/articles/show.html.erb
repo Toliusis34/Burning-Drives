@@ -1,16 +1,16 @@
-<div class="col-10 offset-1">
-  <%= image_tag @article.picture.url %>
-</div>
+<%= image_tag @article.picture.url, class: 'img-show' %>
 
-<div class="booyah-box col-10 offset-1">  
-  <h1><%= @article.article_name %></h1>
-  <i><%= @article.tagline %></i>
-  <br /><br />
-  <p><%= @article.article %></p>
-  <div class="float-right">
-    <% if current_user && current_user == @article.user %>
-      <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-outline-success' %>
-      <%= link_to 'Delete Post', article_path(@article), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'}, class: 'btn btn-danger' %>
-    <% end %>
+<div class="booyah-box-show col-8 offset-2">
+  <div class="show-header">  
+    <h1><%= @article.article_name %></h1>
+    <i><%= @article.tagline %></i>
+    <br />
+    <small><%= @article.user.email %></small>
   </div>
+  <br /><br /><hr />
+  <p><%= @article.article %></p>
+  <% if current_user && current_user == @article.user %>
+    <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-outline-success' %>
+    <%= link_to 'Delete Post', article_path(@article), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'}, class: 'btn btn-danger' %>
+    <% end %>
 </div>

@@ -1,5 +1,21 @@
-<% @results.each do |result| %>
-  <div class="booyah-box col-10 offset-1">
-    <%= result["name"] %>
+<% @games.each do |result| %>
+  <div class="booyah-box-search col-8 offset-2">
+    <% if result["background_image"].nil? %>
+      <%= "No image found" %>
+    <% else %>
+      <%= image_tag result["background_image"], class: 'img d-block img-fluid' %>
+    <% end %>
+
+    <p><%= result["name"] %></p>
+
+    <% if result["platforms"].nil? %>
+      <%= "No platforms found" %>
+    <% else %>
+      <% result["platforms"].each do |platform| %>
+        <i>'<%= platform["platform"]["name"] %>'</i>
+      <% end %>
+    <% end %>
+
+    <%= link_to 'New Article', new_article_path, class: 'float-right' %>
   </div>
 <% end %>

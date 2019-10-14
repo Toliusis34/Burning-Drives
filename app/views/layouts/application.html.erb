@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -35,7 +36,7 @@
           <% end %>
         </ul>
         <%= form_tag(search_page_path, :method => "get", class: "form-inline my-2 my-lg-0 ml-auto") do %>
-          <input name="search_query" class="form-control mr-sm-2" type="text" placeholder="Search" %>
+          <input name="search_query" class="form-control mr-sm-2" type="text" placeholder="Search for a game" %>
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         <% end %>
       </div>

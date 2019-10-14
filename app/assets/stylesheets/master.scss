@@ -8,8 +8,50 @@
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding: 20px;
+}
+
+.booyah-box-index {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: 175px;
+}
+
+.booyah-box-show {
+  background: #F5F5F5;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #e4e4e4 #e4e4e4 #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.booyah-box-search {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: 175px;
+}
+
+.show-header {
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: #F5F5F5;
+  background-color: #E4E5E9;
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -27,13 +69,138 @@ body {
   box-shadow: 0px 1px 3px #2a2a2a;
 }
 
-.btn btn-outline-success {
-  background-color: #28324B;
-}
-
 .invalid-feedback {
   color: #ff3333;
   background-color: #ffeeee;
   border-radius: 3px;
   padding: 2px 8px 2px 8px;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  text-align: center;
+}
+
+.img {
+  float: left;
+  height: 140px;
+  width: 250px;
+  object-fit:cover;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.img-show {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 3px;
+  width: 50%;
+  height:500px;
+  object-fit: cover;
+}
+
+p {
+  font-size: 20px;
+}
+
+.digg_pagination {
+  background: white;
+  cursor: default;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd;
+    border-radius: 8px; }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #28324B;
+    color: white;
+    border: 1px solid #28324B;
+    border-radius: 8px; }
+  .digg_pagination a {
+    text-decoration: none;
+    color: #28324B;
+    border: 1px solid #28324B;
+    border-radius: 8px; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #0CC300;
+      border-color: #0CC300; }
+  .digg_pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; 
+    float: center;
+    }
+
+.link_to_color {
+  color: #000;
+}
+
+.link_to_color:hover {
+  color: #0CC300;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: #0CC300;
+}
+
+.hero {
+  background-color: #fff;
+  height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: 0px 3px 8px #2a2a2a;
+  margin-top: 10px;
+}
+
+.frosty {
+  background: rgba(191, 191, 191, 0.1);
+  color: black;
+  padding: 46px;
+}
+
+.frosty h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  text-shadow: rgba(221, 223, 227, 0.95) 1px 1px;
+}
+
+.frosty h3 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  text-shadow: rgba(221, 223, 227, 0.95) 1px 1px;
+}
+
+.hero-img {
+  width: 625px;
+  height: 350;
 }
