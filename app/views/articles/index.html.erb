@@ -1,9 +1,7 @@
 <div class="hero">
   <br />
-  <div class="col-4 offset-2 float-left">
-    <%= image_tag 'hero.jpg', class: 'hero-img d-block img-fluid' %>
-  </div>
   <div class="frosty col-8 offset-2 text-center">
+    <%= image_tag 'hero.jpg', class: 'hero-img d-block img-fluid float-left' %>
     <h1>Where anyone with a passion for games can write their own review, article, or wiki!</h1>
     <br />
     <h3>Get Started</h3>
@@ -11,13 +9,14 @@
     <%= link_to 'New Article', new_article_path, class: 'btn btn-outline-success' %>
     <br />
   </div>
+  <br />
 </div>
 
 
 <% @articles.order(updated_at: :desc).each do |article| %>
   <div class="booyah-box-index col-8 offset-2">
     <%= image_tag article.picture.url, class: 'img d-block img-fluid' %>
-    <h2><%= link_to article.article_name, article_path(article), class: 'link_to_color' %></h2><br />
+    <h2><%= link_to article.article_name, article_path(article), class: 'link_to' %></h2><br />
     <i><%= article.tagline %></i><br />
   </div>
 <% end %>

@@ -22,7 +22,7 @@
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 20px;
-  height: 175px;
+  padding-bottom: 75px;
 }
 
 .booyah-box-show {
@@ -31,8 +31,8 @@
   border-color: #e4e4e4 #e4e4e4 #e4e4e4 #e4e4e4;
   margin-top: 10px;
   margin-bottom: 20px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -47,7 +47,7 @@
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 20px;
-  height: 175px;
+  padding-bottom: 75px;
 }
 
 .show-header {
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background-color: #E4E5E9;
-  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Encode Sans', sans-serif;
 }
 
 .navbar {
@@ -87,8 +87,8 @@ body {
   height: 140px;
   width: 250px;
   object-fit:cover;
-  margin-right: 10px;
   border-radius: 3px;
+  margin-right: 25px;
 }
 
 .img-show {
@@ -158,11 +158,11 @@ p {
     float: center;
     }
 
-.link_to_color {
+.link_to {
   color: #000;
 }
 
-.link_to_color:hover {
+.link_to:hover {
   color: #0CC300;
   text-decoration: none;
 }
@@ -180,27 +180,35 @@ p {
   background-size: cover;
   box-shadow: 0px 3px 8px #2a2a2a;
   margin-top: 10px;
+  height: auto;
+  font-size: auto;
 }
 
 .frosty {
   background: rgba(191, 191, 191, 0.1);
   color: black;
   padding: 46px;
+  height: auto;
+  font-weight: normal;
+
 }
 
 .frosty h1 {
-  font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
   text-shadow: rgba(221, 223, 227, 0.95) 1px 1px;
 }
 
 .frosty h3 {
-  font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   text-shadow: rgba(221, 223, 227, 0.95) 1px 1px;
 }
 
 .hero-img {
-  width: 625px;
-  height: 350;
+  width: 605px;
+  height: auto;
+  margin-top: -46px;
+}
+
+.clear {
+  clear: both;
 }
