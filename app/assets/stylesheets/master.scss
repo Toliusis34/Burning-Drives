@@ -184,6 +184,19 @@ p {
   font-size: auto;
 }
 
+.hero-search {
+  background-color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: 0px 3px 8px #2a2a2a;
+  margin-top: 10px;
+  height: auto;
+  padding: 25px;
+  text-align: center;
+}
+
 .frosty {
   background: rgba(191, 191, 191, 0.1);
   color: black;
@@ -212,4 +225,9 @@ p {
 
 .clear {
   clear: both;
+}
+
+.search-header {
+  text-align: center;
+  padding: 25px;
 }
