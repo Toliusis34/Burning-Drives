@@ -5,6 +5,7 @@
     <%= f.input :article_name %>
     <%= f.input :tagline %>
     <%= f.input :article, :input_html => {:rows => 50} %>
+    <%= f.hidden_field :api_game_name, value: params[:name] %>
     <br />
     <%= f.submit 'Post', class: 'btn btn-outline-success' %>
   <% end %>

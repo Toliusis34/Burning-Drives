@@ -1,3 +1,5 @@
+
+
 <% @games.each do |result| %>
   <div class="booyah-box-search col-8 offset-2">
     <% if result["background_image"].nil? %>
@@ -16,6 +18,7 @@
       <% end %>
     <% end %>
 
-    <%= link_to 'New Article', new_article_path, class: 'float-right' %>
+    <%= link_to 'New Article', new_article_path(name: result["name"]), class: 'float-right' %>
+
   </div>
 <% end %>
